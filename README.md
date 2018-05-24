@@ -56,7 +56,7 @@ $ wget https://github.com/kubernetes/charts/blob/master/stable/spinnaker/values.
 
 # -> Install spinnaker helm chart.
 
-$ helm install -n spinnaker stable/spinnaker -f values.yaml  --version 0.3.5 --namespace kube-system
+$ helm install -n spinnaker stable/spinnaker -f values.yaml --namespace kube-system
 
 TIP: Needs atleast 7.5 GB/2vCPUSs for scheduling pods.
      

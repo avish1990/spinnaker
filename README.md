@@ -66,4 +66,5 @@ TIP: Needs atleast 7.5 GB/2vCPUSs for scheduling pods.
 
 # -> You will need to create 2 port forwarding tunnels in order to access the Spinnaker UI:
  $ export DECK_POD=$(kubectl get pods --namespace kube-system -l "component=deck,app=spinnakernew-spinnaker" -o jsonpath="{.items[0].metadata.name}")
+ 
  $ kubectl port-forward --namespace kube-system $DECK_POD 9000

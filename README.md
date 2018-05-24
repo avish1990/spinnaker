@@ -62,3 +62,4 @@ TIP: Needs atleast 7.5 GB/2vCPUSs for scheduling pods.
      
      Delete helm chart (helm del --purge spinnaker) if it times out and then install again. 
 
+a

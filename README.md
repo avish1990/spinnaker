@@ -20,7 +20,7 @@ $ export PATH=$PATH:/usr/local/bin (if helm help doesn't works)
 
 $ kubectl create serviceaccount tiller --namespace kube-system
 
-$ kubectl create -f rbac-config.yaml
+$ kubectl create -f rbac-tiller.yaml
 
 -> Initialize helm
 

@@ -3,34 +3,58 @@
 
 ===> Install helm.
 
--> Download package
+# -> Download package
 $ wget https://storage.googleapis.com/kubernetes-helm/helm-v2.9.1-linux-amd64.tar.gz
 
--> Untar
+
+
+# -> Untar
 
 $ tar -zxvf helm-v2.0.0-linux-amd64.tgz
 
--> Move helm binary to executable path.
+
+
+
+# -> Move helm binary to executable path.
 
 $ mv linux-amd64/helm /usr/local/bin/helm
 
 $ export PATH=$PATH:/usr/local/bin (if helm help doesn't works)
 
--> Create a service account. (In case of permission denied error while running helm install command)
+
+
+
+
+# -> Create a service account. (In case of permission denied error while running helm install command)
 
 $ kubectl create serviceaccount tiller --namespace kube-system
 
 $ kubectl create -f rbac-tiller.yaml
 
--> Initialize helm
+
+
+
+
+
+# -> Initialize helm
 
 $ helm init --service-account tiller
 
--> Download default config file - values.yaml for spinnaker installation.
+
+
+
+
+# -> Download default config file - values.yaml for spinnaker installation.
 
 $ wget https://github.com/kubernetes/charts/blob/master/stable/spinnaker/values.yaml
 
--> Install spinnaker helm chart.
+
+
+
+
+
+
+# -> Install spinnaker helm chart.
 
 $ helm install -n spinnaker stable/spinnaker -f values.yaml  --version 0.3.5 --namespace kube-system
 
